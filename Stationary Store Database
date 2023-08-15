@@ -1,0 +1,66 @@
+--create stationary store inventory database
+
+
+CREATE TABLE notations_by_liz (id INTEGER PRIMARY KEY, item TEXT, aisle INTEGER, price INTEGER, style TEXT, quantity INTEGER);
+
+INSERT INTO notations_by_liz (id, item, aisle, price, quantity) VALUES (1, "pens", 1, 1.50, 56);
+
+INSERT INTO notations_by_liz (style, quantity) VALUES ("black", 20);
+
+INSERT INTO notations_by_liz (style, quantity) 
+VALUES ("teal", 17);
+
+INSERT INTO notations_by_liz (style, quantity) VALUES ("rose", 12);
+
+INSERT INTO notations_by_liz (style, quantity) VALUES ("emerald", 7);
+
+INSERT INTO notations_by_liz VALUES (6, "pencils", 1, .75, "NA", 100);
+
+INSERT INTO notations_by_liz (id, item, aisle, price, quantity) VALUES (7, "highlighters", 1, 2.00, 43);
+
+INSERT INTO notations_by_liz (style, quantity) VALUES ("sunflower", 12);
+
+INSERT INTO notations_by_liz (style, quantity) VALUES ("azure", 19);
+
+INSERT INTO notations_by_liz (style, quantity) VALUES ("gray", 2);
+
+INSERT INTO notations_by_liz (style, quantity) VALUES ("brick", 10);
+
+INSERT INTO notations_by_liz VALUES (12, "cases", 2, 5.00, "flower", 30); 
+
+INSERT INTO notations_by_liz VALUES (13, "erasers", 2, 1.00, "NA", 25);
+
+INSERT INTO notations_by_liz VALUES (14, "rulers", 2, 3.00, "wood", 13);
+
+INSERT INTO notations_by_liz VALUES (15, "stickers", 3, 7.50, "assorted", 15);
+
+INSERT INTO notations_by_liz VALUES (16, "post it notes", 3, 4.00, "cream", 11);
+
+INSERT INTO notations_by_liz VALUES (17, "bookmarks", 3, 1.75, "mint", 35);
+
+INSERT INTO notations_by_Liz (id, item, aisle, price, quantity) VALUES (18, "notebooks", 4, 10.00, 38);
+
+INSERT INTO notations_by_liz (style, quantity)
+VALUES ("blank", 10);
+
+INSERT INTO notations_by_liz (style, quantity) VALUES ("grid", 7);
+
+INSERT INTO notations_by_liz (style, quantity) VALUES ("ruled", 20);
+
+INSERT INTO notations_by_liz (style, quantity) VALUES ("dotted", 1);
+
+INSERT INTO notations_by_liz VALUES (23, "planners", 4, 12.00, "geometric", 16);
+
+INSERT INTO notations_by_liz VALUES (24, "address books", 4, 9.00, "stars", 9);
+
+
+--sort inventory by price and list total quantity of each item
+
+SELECT * FROM notations_by_liz; 
+
+SELECT * FROM notations_by_liz WHERE price  ORDER BY price ASC;
+
+
+--give average cost of an item at stationary store
+
+SELECT AVG(price) FROM notations_by_liz;
